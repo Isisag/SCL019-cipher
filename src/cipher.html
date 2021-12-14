@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <title>Caesar Cipher</title>
+ <link rel="stylesheet" href="style.css" />
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="main">
+
+
+<div class="root">
+     
+    <div class="cipherSeccion width" id="cipherSeccion ">
+      <h1 class="width" style="color: black;"> Military <br> Message </h1>
+      <p class="spacing"> Escribe aquí el mensaje para tu tropa </p>
+      <textarea name="" id="input-user" cols="50" rows="10" class="spacing input-user width"></textarea>
+      <input type="number" name="" id="range" size="1" min="2" max="26" value="5" class="spacing range spacingElements"> 
+      <span class="spacing spacingElements "> Este será el <br />   desplazamiento de <br /> tu cifrado</span>
+      <h4 class="width">Cífralo para que no lo descubra el otro bando <br> ó decifralo para saber su respuesta</h4>
+
+      <!-- <a href="#decipherSeccion" id="cipher" onclick="cypher()" class="spacing button "> <button class="buttonHiden"> Cifrar </button> </a> -->
+      <!-- <a href="#decipherSeccion" id="cipher" onclick="cypher()" class="spacing button ">  Cifrar </a> -->
+
+      <input type="button" value="Cifrar" class="spacing button" id="cipher" href="#decipherSeccion">
+      <input type="button" value="Decifrar" class="spacing button" id="decipher" href="#decipherSeccion">
+
+    </div>
+    
+    <div class="decipherSeccion width">
+     <div class="decipher" id="decipherSeccion">
+       
+         <h3 class="width"> ¡Las tropas romanas <br /> han recibido tu mensaje! </h3>
+
+         <div class="decipherResponse">
+         <p class="decipherText" id="parrafo"> </p>
+         </div>
+
+         <p class="dinamicMessage width" id="dinamicMessage"> ¡Excelente estrategia comandante! </p>
+         <a href="cipher.html" class="button otherMessage"> Envía otro Mensaje </a>
+         <a href="index.html" class="button "> Home </a>
+        
+     </div>
+    </div>
+ 
+    </div> 
+     
+     <script src="index.js" type="module"></script>
+     
+     <!-- <script src="cipher.js"></script> -->
+     
+</body>
+</html>

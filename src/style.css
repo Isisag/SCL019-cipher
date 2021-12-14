@@ -1,0 +1,315 @@
+*{
+    font-family: 'Rubik', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+}
+:root{
+    /* variables personalizadas */
+    --main-first-color: #F67C05;
+    --main-second-color: #F6800D;
+    --index-first-color: #0D0C0C;
+    --index-second-color: #0A0909;
+    --button-color: #272626;
+    --button-color-hover: #171717;
+}
+h1,h2,h3,h4,span,p{
+    color: white;
+    text-align: center;
+}
+h1{
+font-weight: 700;
+font-size: 64px;
+}
+h3{
+    font-size: 40px;
+}
+h4{
+    font-weight: 400;
+}
+span{
+    font-weight: 100;
+    font-size: 10px;
+}
+p{
+    font-weight: 300;
+}
+
+.spacing{
+    margin: 5px 5px;
+}
+.spacingElements{
+    margin: 7px;
+}
+
+.button{
+    cursor: pointer;
+    background-color: #272626;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(172, 89, 12, 0.8);  
+    border: none;
+    padding: .4rem 2rem;
+    text-decoration: none;
+    margin: 1rem .2rem;
+    font-size: 12px;
+    text-align: center;
+}
+
+.button:hover{
+    background: var(--button-color-hover);
+}
+
+hr{
+    border: rgb(16, 15, 15) 0.5px solid;
+    width: 80vh;
+}
+
+a:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+img{
+    width: 600px;
+    margin: 4rem 0rem;
+}
+
+/*  Cambios en la scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: wheat;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #272420;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(39, 36, 32, 0.77);;
+  }
+
+
+/*  INDEX PAGE */
+
+.index{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0px;
+}
+
+.indexTitle{
+    color: var(--main-first-color);
+    font-size: 96px;
+    line-height: 114px;
+    margin-bottom: 2px;
+}
+
+.indexSubtitle{
+    color: var(--main-first-color);
+    font-size: 28px;
+    line-height: 33px;
+    margin-top: 2px;
+}
+
+.welcomeSeccion{
+    background-color: var(--index-first-color);
+    width: 80vh;
+    height: 100vh;
+    /* position: static; */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+.history{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.historySeccion{
+    background-color: var(--index-second-color);
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    /* position: absolute; */
+    width: 100%;
+    height: 140vh;
+    left: 0px;
+    right: 0px;
+    top: 110vh;
+    margin: 0;
+}
+
+.historyMessage{
+   width: 50px;
+}
+
+.startButton{
+    cursor: pointer;
+    color: white;
+    border: none;
+    padding: .4rem 2rem;
+    text-decoration: none;
+    background: #FD9026;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
+    margin: 1rem 0rem;
+}
+
+.startButton:hover{
+  background-color: var(--main-first-color);
+}
+
+.inputName{
+    border: none;
+    padding: .3rem;
+}
+
+.userName{
+  font-size: 50px;
+}
+
+.userNameOutput{
+    margin: 0px ;
+}
+.userNameInput{
+    margin: 1px ;
+}
+
+/*  CIPHER PAGE */
+
+.main{
+    background-color: var(--main-first-color);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+.root{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 45vw;
+    margin: 0px;
+}
+
+/*  Cipher seccion  */
+.cipherSeccion{
+    margin: 0rem 5rem;
+    background-color: var(--main-first-color);
+    width: 80vh;
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.width{ 
+    width: 100%;
+}
+
+/*  deCipher seccion  */
+
+.decipher{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.decipherSeccion{
+    background-color: var(--main-second-color);
+    box-shadow: 0px 0px 4px 4px rgba(124, 41, 16, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    width: 200vh;
+    height: 100vh;
+    left: 0px;
+    top: 110vh;
+}
+
+.decipherResponse{
+    background-color: white;
+    width: 63vh;
+    height: 22vh;
+    overflow-y: scroll;
+    overflow-x: auto;
+    box-shadow: 0px 6px 6px rgba(172, 89, 12, 0.6);  
+}
+
+
+.decipherText{
+    padding: 0px 5px 1px 1px;
+    margin: 1px 5px 1px 1px;
+    font-weight: 500;
+    color:black; 
+    font-size: 12px;
+    text-align: start;
+}
+
+.range{
+    background-color: white;
+    border-width: 1px;
+    border: solid transparent 1px;
+    text-align: center;
+}
+.range:focus{
+    border: solid transparent 1px;
+}
+
+input:focus { 
+    outline: none !important;
+    border-color: #ffffff solid;
+    box-shadow: 0 0 10px #884813;
+}
+
+.input-user{
+    background-color: white;
+    border-width: 1px;
+    border: solid transparent 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color:black; 
+    font-size: 12px;
+}
+
+textarea:focus { 
+    outline: none !important;
+    border: solid transparent 1px;
+    box-shadow: 0 0 10px #884813;
+}
+
+.homeButton{
+    margin: 0px 4px ;
+}
+
+.otherMessage{
+    font-size: 13px;
+    text-align: center;
+}
+
+.buttonHiden{
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    border: none;
+    padding: .1rem 1rem;
+    text-decoration: none;
+}
