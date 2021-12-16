@@ -27,9 +27,9 @@ describe('cipher', () => {
 
     // Si decides agregar soporte para minúsculas descomenta el test a
     // continuación.
-    // it('should return "hijklmnopqrstuvwxyzabcdefg" for "abcdefghijklmnopqrstuvwxyz" with offset 33', () => {
-    //   expect(cipher.encode(33, 'abcdefghijklmnopqrstuvwxyz')).toBe('hijklmnopqrstuvwxyzabcdefg');
-    // });
+    it.skip('should return "hijklmnopqrstuvwxyzabcdefg" for "abcdefghijklmnopqrstuvwxyz" with offset 33', () => {
+      expect(cipher.encode(33, 'abcdefghijklmnopqrstuvwxyz')).toBe('hijklmnopqrstuvwxyzabcdefg');
+    });
 
     // Si decides implementar soporte para caracteres no alfabéticos descomenta
     // el test a continuación.
