@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="index">
+
+    <div id="root" class="width">
+
+      <div class="welcomeSeccion width">
+        <h1 class="width indexTitle"> Military <br> Message </h1>
+        <h3 class="spacing indexSubtitle width"> Encripta tu mensaje y gana la batalla </h3>
+        <p class="width"> Indica tu Nombre Comandante </p>
+        <input type="text" class="inputName" id="userName" placeholder="Ingresa Tu Nombre">
+        <h4 class="width">Military message es un juego en donde pondrás a prueba tus habilidades tácticas <br />
+           y a la vez podrás ocultarlas de tus enemigos con un cifrado nivel estratega </h4>
+      </div>
+    
+      <div class="historySeccion width">
+        <div class="history width" id="historySeccion">
+            <h2 class="width userName userNameInput" id=""> Comandante </h2>
+            <h2 class="width userName userNameOutput" id="userNameView">  </h2>
+            <img src="greek-art.jpg" alt="greek-art">
+            <p class="historyMessage width" id="dinamicMessage"> Basado en la táctica implementada en la antigua Grecia 
+              por el comandante romano Julio Cesar <br /> en la que puedes cifrar un mensaje moviendo espacios en el alfabeto 
+              y así obtener caracteres <br /> al azar que a simple vista no tienen un significado legible.
+            </p> <hr>
+            <p class="historyMessage width"> Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D.<br /> Entonces si queremos cifrar la 
+              palabra “HOLA” con un desplazamiento de 3 nos quedaría “KROD”, <br /> Si te gustaría saber más sobre el cifrado 
+              cesar pincha <a href="https://es.wikipedia.org/wiki/Cifrado_César" style="color: #F6800D;"> aquí </a>
+            </p>
+            <a href="cipher.html" class="startButton"> Comenzar </a>
+             
+        </div>
+       </div>
+
+    </div>
+
+     
+     <script src="index.js" type="module"></script>
+     
+  </body>
+</html>
