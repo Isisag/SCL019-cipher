@@ -284,7 +284,6 @@ input:focus {
     background-color: white;
     border-width: 1px;
     border: solid transparent 1px;
-    text-transform: uppercase;
     font-weight: 500;
     color:black; 
     font-size: 12px;

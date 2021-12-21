@@ -6,14 +6,24 @@ const cipher = {
   let stringOutput = ''; 
 
   stringSplit.forEach( (character) => {
-    if( character == ' ' || character == '.' || character ==  ',' )
+
+    let codeInput = character.charCodeAt();
+     // caracteres especiales
+    if( codeInput >= 32 && codeInput <= 64 || codeInput >= 91 && codeInput <= 96){
       stringOutput = stringOutput + character
-    else{
-    let codeInput = character.charCodeAt(); 
-    let codeOutput = Math.abs((codeInput - 65 + offset) %26 + 65);
+    }  
+    // Minús
+     if( codeInput >= 97 && codeInput <= 122 ){
+    let codeOutput = (codeInput - 65 + offset %26) + 65;
+    stringOutput = stringOutput.toLowerCase() + String.fromCharCode(codeOutput);
+    } // Mayús
+    if( codeInput >= 65 && codeInput <= 90 ) {
+    let codeOutput = (codeInput - 65 + offset) %26 + 65;
     stringOutput = stringOutput.toUpperCase() + String.fromCharCode(codeOutput);
-  }});
- return stringOutput;
+    }
+    });
+
+   return stringOutput;
 },
 
  decode: (offset , userInput) => {
@@ -25,23 +35,17 @@ const cipher = {
 
   let codeInput = character.charCodeAt(); 
 
-  if( character == ' ' || character == '.' || character ==  ',' )
-    stringOutput = stringOutput + character
-    else if( !codeInput >= 65 && codeInput <= 90){
-       console.log('test');
-    }
-  else {
-  // let codeOutput = Math.abs( 26 % (offset - codeInput) - 65 )
-  // let codeOutput = Math.abs( codeInput - offset )
-  let codeOutput = Math.abs( (codeInput + 65 - offset ) %26 +65 )
- 
-  
-  stringOutput = stringOutput.toUpperCase() + String.fromCharCode(codeOutput);
-} 
-  console.log('decode input ' + userInput)
-  console.log('decode offset ' + offset)
-  console.log('decode output ' + stringOutput)
- 
+  if( codeInput >= 32 && codeInput <= 64){
+  stringOutput = stringOutput + character
+  } //minus
+  if( codeInput >= 97 && codeInput <= 122 ){
+    let codeOutput =  (codeInput + 65 - offset %26) +65 ;
+    stringOutput = stringOutput.toLowerCase() + String.fromCharCode(codeOutput);
+  }//mayus
+  if( codeInput >= 65 && codeInput <= 90 ) {
+    let codeOutput = Math.abs( (codeInput + 65 - offset ) %26 +65 );
+    stringOutput = stringOutput.toUpperCase() + String.fromCharCode(codeOutput);
+  }
 })
  return stringOutput;
 },
@@ -49,29 +53,3 @@ const cipher = {
 }
 
 export default cipher;
-
-// decode: (userInput,offset) => {
-          
-//   let stringSplit = userInput.split('');
-//   let stringOutput = ''; 
-  
-//   stringSplit.forEach( (character)=> {
-//    if( character == ' ' || character == '.' || character ==  ',' )
-//      stringOutput = stringOutput + character
-//      else if( codeInput  ){
-       
-//      }
-//    else{
-//    let codeInput = character.charCodeAt(); 
-//    let codeOutput = Math.abs(parseInt(offset - codeInput))
-   
-//    stringOutput = stringOutput.toUpperCase() + String.fromCharCode(codeOutput);
-//  }
-    
-//    console.log('decode input ' + userInput)
-//    console.log('decode offset ' + offset)
-//    console.log('decode output ' + stringOutput)
-  
-//  })
-//   return stringOutput;
-//  },
