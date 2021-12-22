@@ -11,15 +11,15 @@ const cipher = {
      // caracteres especiales
     if( codeInput >= 32 && codeInput <= 64 || codeInput >= 91 && codeInput <= 96){
       stringOutput = stringOutput + character
-    }  
+    };
     // Minús
-     if( codeInput >= 97 && codeInput <= 122 ){
-    let codeOutput = (codeInput - 97 + offset) %26 + 97;
-    stringOutput = stringOutput.toLowerCase() + String.fromCharCode(codeOutput);
+    if( codeInput >= 97 && codeInput <= 122 ){
+    let codeOutput = ((codeInput - 97 + offset) %26) + 97;
+    stringOutput = stringOutput + String.fromCharCode(codeOutput);
     } // Mayús
     if( codeInput >= 65 && codeInput <= 90 ) {
     let codeOutput = (codeInput - 65 + offset) %26 + 65;
-    stringOutput = stringOutput.toUpperCase() + String.fromCharCode(codeOutput);
+    stringOutput = stringOutput + String.fromCharCode(codeOutput);
     }
     });
 
@@ -40,11 +40,11 @@ const cipher = {
   stringOutput = stringOutput + character
   } //minus
   if( codeInput >= 97 && codeInput <= 122 ){
-    let codeOutput =  Math.abs( (codeInput + 97 - offset) %26 +97 ) ;
+    let codeOutput =  Math.abs((codeInput + 97 - offset) %26 +97);
     stringOutput = stringOutput.toLowerCase() + String.fromCharCode(codeOutput);
-  }//mayus
+  } //mayus
   if( codeInput >= 65 && codeInput <= 90 ) {
-    let codeOutput = Math.abs( (codeInput + 65 - offset ) %26 +65 );
+    let codeOutput = Math.abs((codeInput + 65 - offset ) %26 +65 );
     stringOutput = stringOutput.toUpperCase() + String.fromCharCode(codeOutput);
   }
 })
