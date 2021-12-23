@@ -11,7 +11,7 @@ const cipher = {
      // caracteres especiales
     if( codeInput >= 32 && codeInput <= 64 || codeInput >= 91 && codeInput <= 96){
       stringOutput = stringOutput + character
-    };
+    }
     // Minús
     if( codeInput >= 97 && codeInput <= 122 ){
     let codeOutput = ((codeInput - 97 + offset) %26) + 97;
